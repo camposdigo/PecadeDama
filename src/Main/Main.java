@@ -1,12 +1,22 @@
 package Main;
 
-import PecaDeDamas.PecaDeDamas; 
+import java.util.ArrayList;
+import java.util.List;
+
+import PecaDeDamas.Dama;
+import PecaDeDamas.PecaComum;
+import PecaDeDamas.PecaDeDamas;
 
 public class Main {
     public static void main(String[] args) {
-        PecaDeDamas peca1 = new PecaDeDamas("Preta", "B2");
-        PecaDeDamas peca2 = new PecaDeDamas("Branca", "A1");
-        
-        System.out.println("As peças nasceram com sucesso!");
+        List<PecaDeDamas> pecas = new ArrayList<>();
+
+        pecas.add(new PecaDeDamas("Preta", "B2"));
+        pecas.add(new PecaComum("Branca", "A1"));
+        pecas.add(new Dama("Preta", "D4"));
+
+        for (PecaDeDamas peca : pecas) {
+            System.out.println(peca.movimentar());
+        }
     }
 }

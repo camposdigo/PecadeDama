@@ -16,4 +16,16 @@ public class PecaDeDamas {
     public void setPosicao(String posicao) {
         this.posicao = posicao;
     }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public String getPosicao() {
+        return posicao;
+    }
+
+    public String movimentar() {
+        return "A peca de damas se movimenta pelo tabuleiro.";
+    }
 }
